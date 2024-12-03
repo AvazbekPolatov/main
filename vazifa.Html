@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ro'yxatdan o'tish</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            color: green;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .gender-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .gender-group input {
+            width: auto;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: rgb(4, 128, 0);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover {
+            background: rgb(5, 100, 0);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Ro'yxatdan o'tish</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Ismingizni kiriting</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="surname">Familiyangizni kiriting</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Tug'ilgan sanani tanlang</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Elektron pochta manzilini kiriting</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Jinsi</label>
+                <div class="gender-group">
+                    <label><input type="radio" name="gender" value="erkak" required> Erkak</label>
+                    <label><input type="radio" name="gender" value="ayol"> Ayol</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="image">Rasm tanlang</label>
+                <input type="file" id="image" name="image" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="terms" required> Ma'lumotlardan foydalanishga roziman
+                </label>
+            </div>
+            <button type="submit" class="btn">Saqlash</button>
+        </form>
+        <p class="footer">&copy; 2024. Barcha huquqlar himoyalangan.</p>
+    </div>
+</body>
+</html>
+
