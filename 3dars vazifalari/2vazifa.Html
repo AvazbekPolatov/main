@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma'lumotnoma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: green;
+        }
+        .content {
+            display: flex;
+        }
+        .left {
+            width: 40%;
+            padding: 10px;
+            border-right: 1px solid #000;
+        }
+        .right {
+            width: 60%;
+            padding: 10px;
+        }
+        .right form {
+            display: flex;
+            flex-direction: column;
+        }
+        .right form label {
+            margin: 10px 0 5px;
+        }
+        .right form input,
+        .right form select,
+        .right form textarea {
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+        .right form input[type="file"] {
+            border: none;
+        }
+        .right form button {
+            width: 100px;
+            padding: 10px;
+            background-color: green;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .right form button:hover {
+            background-color: darkgreen;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: green;
+        }
+        .message {
+            margin-top: 20px;
+            text-align: center;
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ma'lumotnoma</h1>
+        <div class="content">
+            <div class="left">
+                <p>
+                    What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+            <div class="right">
+                <form onsubmit="return saqlashXabari();">
+                    <fieldset>
+                        <legend><b>Asosiy ma'lumotlar</b></legend>
+                        <label for="ism">Ism</label>
+                        <input type="text" id="ism" name="ism" placeholder="Ismingizni kiriting">
+
+                        <label for="familiya">Familiya</label>
+                        <input type="text" id="familiya" name="familiya" placeholder="Familiyangizni kiriting">
+
+                        <label for="tugilgan_sana">Tug'ilgan sana</label>
+                        <input type="date" id="tugilgan_sana" name="tugilgan_sana">
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com">
+
+                        <label for="rasm">Rasmi</label>
+                        <input type="file" id="rasm" name="rasm">
+                    </fieldset>
+                    <fieldset>
+                        <legend><b>Qo'shimcha ma'lumotlar</b></legend>
+                        <label for="viloyat">Qaysi viloyatdansiz</label>
+                        <select id="viloyat" name="viloyat">
+                            <option value="Farg'ona">Farg'ona</option>
+                            <option value="Toshkent">Toshkent</option>
+                            <option value="Samarqand">Samarqand</option>
+                            <option value="Andijon">Andijon</option>
+                        </select>
+
+                        <label for="tillar">Qaysi dasturlash tillarini bilasiz?</label>
+                        <select id="tillar" name="tillar" multiple>
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                            <option value="C">C</option>
+                            <option value="C++">C++</option>
+                        </select>
+
+                        <label for="izoh">Izoh</label>
+                        <textarea id="izoh" name="izoh" rows="4"></textarea>
+                    </fieldset>
+                    <button type="submit">Saqlash</button>
+                </form>
+                <div class="message" id="message"></div>
+            </div>
+        </div>
+        <div class="footer">
+            Mualliflik huquqi © 2024. Barcha huquqlar himoyalangan.
+        </div>
+    </div>
+
+    <script>
+        function saqlashXabari() {
+            document.getElementById('message').innerText = "Ma'lumotlar saqlandi!";
+            return false;
+        }
+    </script>
+</body>
+</html>
